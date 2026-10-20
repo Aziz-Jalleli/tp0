@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ms-account
+  # Database datasource
+  datasource:
+    url: jdbc:h2:mem:accountdb
+  h2:
+    console:
+      # Display database on H2 console
+      enabled: true
+  jpa:
+    # Display SQL requests on console
+    show-sql: true
+  cloud:
+    # Disable subscription to Eureka and Config Server
+    config:
+      enabled: false
+    discovery:
+      enabled: false
+
+# Le port du customer service = 8000
+server:
+  port: 8100
